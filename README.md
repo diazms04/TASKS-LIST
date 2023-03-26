@@ -2,7 +2,7 @@
 This to do list website was built with python, django and PostgreSQL as database. The frontend with HTML and CSS.
 Allows you to create and delete tasks, which are stored in a database created in postgresql.
 
-![](https://github.com/diazms04/BLOGAPP-DJANGO/blob/main/Screenshot%202023-03-21%20231355.png)
+![](https://github.com/diazms04/TASKS-LIST/blob/main/Screenshot%202023-03-26%20161204.png)
 
 # To run the app on your computer, follow the steps below:
 
