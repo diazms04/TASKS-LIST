@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tasks</h1>
+
+    <form action ="{% url 'create_task' %}" method="POST"> 
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Title">
+        <textarea name="description" rows="3" placeholder="Description"></textarea>
+        <button>Save</button>
+        {% if wa == 1 %}
+            {{error}}
+        {% endif %}
+    </form>
+
+    {% for task in tasks %}
+    <div>
+        <h4>{{task.title}}</h4>
+        <hr>
+        <p>{{task.description}}</p>
+        <form action="{% url 'delete_task' task.id %}" method="POST">
+            {% csrf_token %}
+            <button>Delete</button>    
+        </form>
+        
+    </div>
+    {% empty %}
+        <h1>No tasks yet</h1>
+    {% endfor %}
+</body>
+</html>

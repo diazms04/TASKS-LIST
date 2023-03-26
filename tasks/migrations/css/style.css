@@ -1,0 +1,7 @@
+/* Define los estilos para los encabezados */
+h1 {
+    color: #FF0000; /* Cambia el color del texto a rojo */
+    font-size: 36px; /* Cambia el tamaño de fuente a 36 píxeles */
+    text-align: center; /* Centra el texto */
+  }
+  
